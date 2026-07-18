@@ -18,18 +18,26 @@ A valid, installable FSE **block theme starter**:
 - `theme/theme.json` — design tokens (colour, fluid type, spacing) with accessible defaults.
 - `theme/templates/` — `index` and `single` templates.
 - `theme/parts/` — header and footer template parts.
-- `theme/patterns/hero.php` — a locked hero pattern.
-- `theme/functions.php` — minimal setup (pattern category, text domain).
+- `theme/patterns/` — hero, call-to-action, feature-grid, and testimonial patterns.
+- `theme/functions.php` — minimal setup: pattern category plus token-driven block styles (`Bordered` group, `Pill` button).
+- `theme/assets/fonts/` — self-hosted `Display` font wiring (`Fraunces`) via a `theme.json` `fontFace`.
 
 CI validates `theme.json` and lints every PHP file. This is the extraction of the theme layer
 from the Enterprise FSE Publishing Platform — presentation only, no bundled business logic.
 
 ## Documented boundary (not yet built)
 
-More patterns, block style registrations, and a bundled self-hosted font. A first
-**Dark** style variation (`theme/styles/dark.json`) ships now — an AAA-contrast
-palette override (text 16.4:1, links 9.4:1 against the dark base); CI validates
-every theme JSON file, including style variations.
+The **font binary** is the one remaining boundary item: `theme.json` registers a
+self-hosted `Display` family whose `fontFace` `src` points at
+`assets/fonts/fraunces-variable.woff2`, but that `woff2` file is not committed to
+keep the repository light. Until it is added (see `theme/assets/fonts/README.md`),
+the `Display` family degrades to its system-serif fallback stack, so headings
+still render correctly.
+
+Patterns, block style registrations, and the **Dark** style variation
+(`theme/styles/dark.json`) now ship. The Dark variation is an AAA-contrast palette
+override (text 16.4:1, links 9.4:1 against the dark base); CI validates every theme
+JSON file, including style variations.
 
 > **Document status:** implementation-complete engineering blueprint, not a claim that the software has already been built.
 
