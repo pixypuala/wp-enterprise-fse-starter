@@ -9,4 +9,8 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 ### Added
 - Repository scaffolding: governance files, docs, and CI skeleton.
 - Installable FSE starter theme: theme.json tokens, index/single templates, header/footer parts, hero pattern.
+- Dark style variation (`theme/styles/dark.json`) with an AAA-contrast palette (text 16.4:1, links 9.4:1).
 - CI validating theme.json and linting theme PHP.
+
+### Changed
+- CI now validates every JSON file under `theme/` (theme.json plus style variations), not just theme.json.

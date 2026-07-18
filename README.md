@@ -26,7 +26,10 @@ from the Enterprise FSE Publishing Platform — presentation only, no bundled bu
 
 ## Documented boundary (not yet built)
 
-Style variations, more patterns, block style registrations, and a bundled self-hosted font.
+More patterns, block style registrations, and a bundled self-hosted font. A first
+**Dark** style variation (`theme/styles/dark.json`) ships now — an AAA-contrast
+palette override (text 16.4:1, links 9.4:1 against the dark base); CI validates
+every theme JSON file, including style variations.
 
 > **Document status:** implementation-complete engineering blueprint, not a claim that the software has already been built.
 
