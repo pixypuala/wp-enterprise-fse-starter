@@ -1,5 +1,33 @@
 # WP Enterprise FSE Starter
 
+## Getting started
+
+Copy `theme/` into `wp-content/themes/enterprise-fse-starter` (or symlink it) and activate it in
+Appearance → Themes. No build step — the theme is pure configuration and block markup.
+
+To try it in the browser with [WordPress Playground](https://wordpress.org/playground/):
+
+```bash
+npx @wp-playground/cli@latest server --mount=theme:/wordpress/wp-content/themes/enterprise-fse-starter
+```
+
+## What is built today
+
+A valid, installable FSE **block theme starter**:
+
+- `theme/theme.json` — design tokens (colour, fluid type, spacing) with accessible defaults.
+- `theme/templates/` — `index` and `single` templates.
+- `theme/parts/` — header and footer template parts.
+- `theme/patterns/hero.php` — a locked hero pattern.
+- `theme/functions.php` — minimal setup (pattern category, text domain).
+
+CI validates `theme.json` and lints every PHP file. This is the extraction of the theme layer
+from the Enterprise FSE Publishing Platform — presentation only, no bundled business logic.
+
+## Documented boundary (not yet built)
+
+Style variations, more patterns, block style registrations, and a bundled self-hosted font.
+
 > **Document status:** implementation-complete engineering blueprint, not a claim that the software has already been built.
 
 A production-oriented reference architecture for a block theme, a site-core plugin, and optional environment bootstrap without mixing presentation and business logic.

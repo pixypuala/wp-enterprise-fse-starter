@@ -8,3 +8,5 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ### Added
 - Repository scaffolding: governance files, docs, and CI skeleton.
+- Installable FSE starter theme: theme.json tokens, index/single templates, header/footer parts, hero pattern.
+- CI validating theme.json and linting theme PHP.

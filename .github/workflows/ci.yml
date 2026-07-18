@@ -1,23 +1,26 @@
 name: CI
 
-# Runs static analysis and tests on every push and pull request.
-# Individual jobs are enabled per repo as the corresponding tooling lands.
 on:
   push:
     branches: [main]
   pull_request:
     branches: [main]
 
-# Cancel superseded runs on the same ref to save CI minutes.
 concurrency:
   group: ci-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
-  lint-and-test:
+  validate:
+    name: Validate theme
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Placeholder gate
-        # Replaced with real lint/test steps as each repo's tooling is added.
-        run: echo "CI scaffold present; per-repo steps are added during implementation."
+      - name: Set up PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.3'
+      - name: Lint theme PHP
+        run: find theme -name '*.php' -print0 | xargs -0 -n1 -P4 php -l
+      - name: Validate theme.json is valid JSON
+        run: php -r 'json_decode(file_get_contents("theme/theme.json")); exit(json_last_error() === JSON_ERROR_NONE ? 0 : 1);'

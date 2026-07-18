@@ -1,0 +1,25 @@
+/*
+Theme Name:        Enterprise FSE Starter
+Theme URI:         https://github.com/pixypuala/wp-enterprise-fse-starter
+Author:            Pixypuala
+Author URI:        https://github.com/pixypuala
+Description:       An opinionated, accessible starting point for enterprise WordPress Full Site Editing block themes. Ships design tokens, base templates, template parts, and a locked hero pattern — no page builder, no bundled business logic.
+Requires at least: 6.5
+Tested up to:      6.7
+Requires PHP:      8.1
+Version:           0.1.0
+License:           GNU General Public License v2 or later
+License URI:       https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain:       enterprise-fse-starter
+Tags:              full-site-editing, block-patterns, accessibility-ready, editor-style, block-styles
+
+This theme, like WordPress, is licensed under the GPL.
+*/
+
+/* Block themes style through theme.json; this file carries the required header
+   plus the accessible focus fallback theme.json cannot express. */
+:where(a):focus-visible,
+:where(button):focus-visible {
+	outline: 2px solid var(--wp--preset--color--accent);
+	outline-offset: 2px;
+}
