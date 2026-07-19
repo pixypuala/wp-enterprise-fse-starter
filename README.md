@@ -25,19 +25,14 @@ A valid, installable FSE **block theme starter**:
 CI validates `theme.json` and lints every PHP file. This is the extraction of the theme layer
 from the Enterprise FSE Publishing Platform — presentation only, no bundled business logic.
 
-## Documented boundary (not yet built)
+## What ships now (previously boundary)
 
-The **font binary** is the one remaining boundary item: `theme.json` registers a
-self-hosted `Display` family whose `fontFace` `src` points at
-`assets/fonts/fraunces-variable.woff2`, but that `woff2` file is not committed to
-keep the repository light. Until it is added (see `theme/assets/fonts/README.md`),
-the `Display` family degrades to its system-serif fallback stack, so headings
-still render correctly.
-
-Patterns, block style registrations, and the **Dark** style variation
-(`theme/styles/dark.json`) now ship. The Dark variation is an AAA-contrast palette
-override (text 16.4:1, links 9.4:1 against the dark base); CI validates every theme
-JSON file, including style variations.
+The **self-hosted font binary** is committed: `theme/assets/fonts/fraunces-variable.woff2`
+(SIL OFL 1.1 — see `theme/assets/fonts/OFL.txt`), the real *Fraunces* variable font
+that `theme.json`'s `Display` `fontFace` points at, with the system-serif fallback
+stack retained. Patterns, block style registrations, and the **Dark** style variation
+(`theme/styles/dark.json`, AAA-contrast: text 16.4:1, links 9.4:1) also ship; CI
+validates every theme JSON file.
 
 > **Document status:** implementation-complete engineering blueprint, not a claim that the software has already been built.
 

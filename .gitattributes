@@ -1,4 +1,7 @@
 * text=auto eol=lf
+# Binary assets must never be normalized/diffed as text.
+*.woff2 binary
+*.png binary
 # Keep release archives lean: exclude dev-only paths from `git archive`.
 /tests export-ignore
 /.github export-ignore
