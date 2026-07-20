@@ -17,8 +17,10 @@ A valid, installable FSE **block theme starter**:
 
 - `theme/theme.json` — design tokens (colour, fluid type, spacing) with accessible defaults.
 - `theme/templates/` — `index` and `single` templates.
+- `theme/templates/` — `index`, `single`, `page`, `search`, and `404` templates. A block theme without `page.html` renders Pages through `index.html`, i.e. the blog loop instead of the page's own content; without `404.html` a missing URL renders an archive title over that same loop.
 - `theme/parts/` — header and footer template parts.
 - `theme/patterns/` — hero, call-to-action, feature-grid, and testimonial patterns.
+- `theme/screenshot.png` — the 1200x900 screenshot the directory requires, rendered from the theme's own patterns.
 - `theme/functions.php` — minimal setup: pattern category plus token-driven block styles (`Bordered` group, `Pill` button).
 - `theme/assets/fonts/` — self-hosted `Display` and `Body` font wiring (`Literata`, `Atkinson Hyperlegible Next`) via `theme.json` `fontFace` entries.
 

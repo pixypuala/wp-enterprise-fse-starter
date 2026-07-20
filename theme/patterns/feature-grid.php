@@ -14,12 +14,12 @@
 	<!-- wp:heading {"level":2,"align":"wide","fontSize":"large"} -->
 	<h2 class="wp-block-heading alignwide has-large-font-size">What ships in the box</h2>
 	<!-- /wp:heading -->
-	<!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|40","left":"var:preset|spacing|40"},"margin":{"top":"var:preset|spacing|40"}}}} -->
-	<div class="wp-block-columns alignwide" style="margin-top:var(--wp--preset--spacing--40)">
-		<!-- wp:column -->
-		<div class="wp-block-column">
-			<!-- wp:group {"className":"is-style-bordered","layout":{"type":"constrained"}} -->
-			<div class="wp-block-group is-style-bordered">
+	<!-- wp:columns {"verticalAlignment":"stretch","align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|40","left":"var:preset|spacing|40"},"margin":{"top":"var:preset|spacing|40"}}}} -->
+	<div class="wp-block-columns are-vertically-aligned-stretch alignwide" style="margin-top:var(--wp--preset--spacing--40)">
+		<!-- wp:column {"verticalAlignment":"stretch"} -->
+		<div class="wp-block-column is-vertically-aligned-stretch">
+			<!-- wp:group {"className":"is-style-bordered","style":{"dimensions":{"minHeight":"100%"}},"layout":{"type":"constrained"}} -->
+			<div class="wp-block-group is-style-bordered" style="min-height:100%">
 				<!-- wp:heading {"level":3,"fontSize":"medium"} -->
 				<h3 class="wp-block-heading has-medium-font-size">Design tokens</h3>
 				<!-- /wp:heading -->
@@ -30,10 +30,10 @@
 			<!-- /wp:group -->
 		</div>
 		<!-- /wp:column -->
-		<!-- wp:column -->
-		<div class="wp-block-column">
-			<!-- wp:group {"className":"is-style-bordered","layout":{"type":"constrained"}} -->
-			<div class="wp-block-group is-style-bordered">
+		<!-- wp:column {"verticalAlignment":"stretch"} -->
+		<div class="wp-block-column is-vertically-aligned-stretch">
+			<!-- wp:group {"className":"is-style-bordered","style":{"dimensions":{"minHeight":"100%"}},"layout":{"type":"constrained"}} -->
+			<div class="wp-block-group is-style-bordered" style="min-height:100%">
 				<!-- wp:heading {"level":3,"fontSize":"medium"} -->
 				<h3 class="wp-block-heading has-medium-font-size">Accessible defaults</h3>
 				<!-- /wp:heading -->
@@ -44,10 +44,10 @@
 			<!-- /wp:group -->
 		</div>
 		<!-- /wp:column -->
-		<!-- wp:column -->
-		<div class="wp-block-column">
-			<!-- wp:group {"className":"is-style-bordered","layout":{"type":"constrained"}} -->
-			<div class="wp-block-group is-style-bordered">
+		<!-- wp:column {"verticalAlignment":"stretch"} -->
+		<div class="wp-block-column is-vertically-aligned-stretch">
+			<!-- wp:group {"className":"is-style-bordered","style":{"dimensions":{"minHeight":"100%"}},"layout":{"type":"constrained"}} -->
+			<div class="wp-block-group is-style-bordered" style="min-height:100%">
 				<!-- wp:heading {"level":3,"fontSize":"medium"} -->
 				<h3 class="wp-block-heading has-medium-font-size">No build step</h3>
 				<!-- /wp:heading -->
