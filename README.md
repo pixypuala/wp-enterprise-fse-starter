@@ -20,17 +20,21 @@ A valid, installable FSE **block theme starter**:
 - `theme/parts/` — header and footer template parts.
 - `theme/patterns/` — hero, call-to-action, feature-grid, and testimonial patterns.
 - `theme/functions.php` — minimal setup: pattern category plus token-driven block styles (`Bordered` group, `Pill` button).
-- `theme/assets/fonts/` — self-hosted `Display` font wiring (`Fraunces`) via a `theme.json` `fontFace`.
+- `theme/assets/fonts/` — self-hosted `Display` and `Body` font wiring (`Literata`, `Atkinson Hyperlegible Next`) via `theme.json` `fontFace` entries.
 
 CI validates `theme.json` and lints every PHP file. This is the extraction of the theme layer
 from the Enterprise FSE Publishing Platform — presentation only, no bundled business logic.
 
 ## What ships now (previously boundary)
 
-The **self-hosted font binary** is committed: `theme/assets/fonts/fraunces-variable.woff2`
-(SIL OFL 1.1 — see `theme/assets/fonts/OFL.txt`), the real *Fraunces* variable font
-that `theme.json`'s `Display` `fontFace` points at, with the system-serif fallback
-stack retained. Patterns, block style registrations, and the **Dark** style variation
+The **self-hosted font binaries** are committed (SIL OFL 1.1 — see
+`theme/assets/fonts/OFL.txt`), with the system fallback stacks retained: *Literata* for
+`Display`, a screen-first editorial serif suited to real article bodies, and *Atkinson
+Hyperlegible Next* for `Body`, drawn by the Braille Institute to make the usually
+confusable letterforms unambiguous for low-vision readers. In an accessibility-first
+starter the body face should do accessibility work, not merely avoid harming it. Nothing
+is fetched from a font CDN at runtime, so the theme adds no external request and leaks no
+visitor IP. Patterns, block style registrations, and the **Dark** style variation
 (`theme/styles/dark.json`, AAA-contrast: text 16.4:1, links 9.4:1) also ship; CI
 validates every theme JSON file.
 
